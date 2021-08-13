@@ -11,25 +11,63 @@ namespace Clase_teorica
         static void Main()
         {
 
-            
-            string[] estudiantes = { "Diego", "Pedro", "Harolina", "Dariana", "Hugo", "Jennifer", "Maria", "Sonia", "Kenia", "Francisco" };
 
-            int length = estudiantes.Length;
+            string[] estudiantes = new string[2];
+            string[] genero = new string[2];
+            int[] edad = new int[2];
 
-            //Ordena el array de manera ascendente
-            Array.Sort(estudiantes);
 
-            
-            /* muestra la solución
-             * ya de manera ordenada
-             */
-            Console.WriteLine("Array ordenado:\n");
-            for (int i = 0; i < length; i++)
+            int femenino = 0;
+            int masculino = 0;
+
+
+
+
+
+            for (int i = 0; i < estudiantes.Length; i++)
             {
-                Console.WriteLine(estudiantes[i]);
-            }
-            Console.ReadKey();
-        }
+                Console.WriteLine("Ingrese el nombre del estudiante");
+                
+                estudiantes[i] = Console.ReadLine();
+                Console.WriteLine("Ingrese el genero del estudiante  f/m");
+                genero[i] = Console.ReadLine();
+                Console.WriteLine("Ingrese la edad del estudiante");
+                edad[i] = Convert.ToInt32(Console.ReadLine());
 
+
+
+
+
+
+
+                Console.WriteLine(estudiantes[i], genero[i], edad[i]);
+
+
+            }
+
+            Console.WriteLine("Datos de los estudiantes: ");
+            for (int i = 0; i < estudiantes.Length; i++)
+            {
+                Console.WriteLine("Nombre: {0} 1  Genero: {1} 1 Edad: {2}", estudiantes[i], genero[i], edad[i]);
+
+                if (genero[i] == "f")
+                {
+
+                    femenino += 1;
+
+                }
+
+                if (genero[i] == "m")
+                {
+                    masculino += 1;
+                }
+
+                Console.WriteLine("la cantidad de estudiantes del genero femenino son:", femenino);
+                Console.WriteLine("la cantidad de estudiantes del genero masculino son:", masculino);
+                Console.ReadKey();
+            }
+
+        }
     }
 }
+
