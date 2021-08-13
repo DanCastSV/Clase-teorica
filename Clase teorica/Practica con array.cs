@@ -51,8 +51,7 @@ namespace Clase_teorica
                 Console.WriteLine("Nombre: {0} 1  Genero: {1} 1 Edad: {2}", estudiantes[i], genero[i], edad[i]);
 
                 if (genero[i] == "f")
-                {
-
+                
                     femenino += 1;
 
                 }
