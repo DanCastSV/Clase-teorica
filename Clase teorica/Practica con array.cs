@@ -37,8 +37,6 @@ namespace Clase_teorica
 
 
 
-
-
                 Console.WriteLine(estudiantes[i], genero[i], edad[i]);
 
 
