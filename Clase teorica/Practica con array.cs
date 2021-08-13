@@ -27,7 +27,6 @@ namespace Clase_teorica
             for (int i = 0; i < estudiantes.Length; i++)
             {
                 Console.WriteLine("Ingrese el nombre del estudiante");
-                
                 estudiantes[i] = Console.ReadLine();
                 Console.WriteLine("Ingrese el genero del estudiante  f/m");
                 genero[i] = Console.ReadLine();
@@ -51,22 +50,24 @@ namespace Clase_teorica
                 Console.WriteLine("Nombre: {0} 1  Genero: {1} 1 Edad: {2}", estudiantes[i], genero[i], edad[i]);
 
                 if (genero[i] == "f")
-                
-                    femenino += 1;
 
-                }
+                    femenino += 1;
 
                 if (genero[i] == "m")
                 {
                     masculino += 1;
                 }
 
-                Console.WriteLine("la cantidad de estudiantes del genero femenino son:", femenino);
-                Console.WriteLine("la cantidad de estudiantes del genero masculino son:", masculino);
-                Console.ReadKey();
             }
 
-        }
+
+            Console.WriteLine("la cantidad de estudiantes del genero femenino son:", femenino);
+            Console.WriteLine("la cantidad de estudiantes del genero masculino son:", masculino);
+            Console.ReadKey();
+        } 
+
+        
     }
 }
+
 
